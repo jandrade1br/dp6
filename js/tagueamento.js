@@ -31,22 +31,69 @@ function entreemcontato()
 
 function download()
 {
-	gtag('event','download_pdf', {'event_category':'menu','event_label':'download_pdf','value':2});
+	//gtag('event','download_pdf', {'event_category':'menu','event_label':'download_pdf','value':2});
+	ga('send', {
+		hitType: 'event',
+		eventCategory: 'menu',
+		eventAction: 'download_pdf',
+		eventLabel: 'download_pdf'
+	});
 }
 
 function montadoras(x)
 {
 	
-	if (x == 'loren') gtag('event','ver_mais', {'event_category':'analise','event_label':'Loren','value':3});
-	if (x == 'ipsum') gtag('event','ver_mais', {'event_category':'analise','event_label':'Ipsum','value':4});
-	if (x == 'dolor') gtag('event','ver_mais', {'event_category':'analise','event_label':'Dolor','value':5});
+	if (x == 'loren') 
+	{
+		ga('send', {
+			hitType: 'event',
+			eventCategory: 'analise',
+			eventAction: 'ver_mais',
+			eventLabel: 'Loren'
+		});	
+	}
+	
+	//gtag('event','ver_mais', {'event_category':'analise','event_label':'Loren','value':3});
+	if (x == 'ipsum') 
+	{	
+	
+		ga('send', {
+			hitType: 'event',
+			eventCategory: 'analise',
+			eventAction: 'ver_mais',
+			eventLabel: 'Ipsum'
+		});	
+	
+	}
+	//gtag('event','ver_mais', {'event_category':'analise','event_label':'Ipsum','value':4});
+	if (x == 'dolor') 
+	{
+	
+		ga('send', {
+			hitType: 'event',
+			eventCategory: 'analise',
+			eventAction: 'ver_mais',
+			eventLabel: 'Dolor'
+		});	
+
+	}
+	
+	//gtag('event','ver_mais', {'event_category':'analise','event_label':'Dolor','value':5});
 	
 }
 
 function emailinput(x)
 {
 	
-	gtag('event', x, {'event_category':'contato','event_label':'preencheu','value':6});
+	//gtag('event', x, {'event_category':'contato','event_label':'preencheu','value':6});
+	
+	
+	ga('send', {
+		hitType: 'event',
+		eventCategory: 'contato',
+		eventAction: x,
+		eventLabel: 'preenche'
+	});	
 
 	
 }
@@ -54,7 +101,14 @@ function emailinput(x)
 function emailsubmit()
 {
 	
-	gtag('event', 'enviado', {'event_category':'contato','event_label':'enviado','value':7});
+	//gtag('event', 'enviado', {'event_category':'contato','event_label':'enviado','value':7});
+	
+	ga('send', {
+		hitType: 'event',
+		eventCategory: 'contato',
+		eventAction: 'enviado',
+		eventLabel: 'enviado'
+	});	
 
 	
 }

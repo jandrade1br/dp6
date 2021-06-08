@@ -20,7 +20,13 @@ ga('send', 'pageview');
 
 function entreemcontato()
 {
-	gtag('event','entre_em_contato', {'event_category':'menu','event_label':'link_externo','value':1});
+	//gtag('event','entre_em_contato', {'event_category':'menu','event_label':'link_externo','value':1});
+	ga('send', {
+		hitType: 'event',
+		eventCategory: 'entre_em_contat',
+		eventAction: 'play',
+		eventLabel: 'link_externo'
+	});
 }
 
 function download()
